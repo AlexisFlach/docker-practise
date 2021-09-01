@@ -1,33 +1,51 @@
-## Övningsuppgifter vecka 35
+## Övningsuppgifter Docker
+
+Detta dokument innehåller det mesta av vad ni förväntas kunna om Docker efter kursen slut. Dokumentet kommer att uppdateras fortlöppande och är uppdelat i 4 sektioner:
+
+```
+1. Instuderingsfrågor
+2. Övningar med Docker CLI
+3. Övningar med Dockerfile
+4. Övningar med Docker Compose
+```
+
+###### 
+
+Ni finner koden här: https://github.com/AlexisFlach/docker-practise
+
+
+
+###### ALEXIS VERSIONSKONTROLL av dokumentet
+
+**VERSION 1.0**
+
+**UPPDATERAD SENAST ONSDAG 1 SEPTEMBER KL 08.30**
+
+Info om uppdatering:
+
+Laddade upp hela projektet.
+
+
 
 ### 1. Instuderingsfrågor
 
-##### 1. Hur kan följande Dockerfile kunna förbättras?
-
-```dockerfile
-FROM node
-WORKDIR /app
-COPY . .
-RUN npm install
-COPY . .
-RUN ["npm", "run", start]
-```
-
-##### 2. Vad saknar detta build-kommando?
+##### 1. Vad saknar detta build-kommando?
 
 ```
-docker build .
+docker build 
 ```
 
-##### 3. Vad är bästa praxis för att namnge en image som vi skapar från en Dockerfile?
+
+
+##### 2. Vad är bästa praxis för att namnge en image som vi skapar från en Dockerfile?
 
 
 
-##### 4.  Vad gör detta kommando?
 
-```bash
-docker exec -it <container id> /bin/bash
-```
+
+###### 3. Hur skulle du beskriva Kernelns roll i Containerteknologi?
+
+
 
 
 
@@ -35,11 +53,17 @@ docker exec -it <container id> /bin/bash
 
 
 
-##### 6. I Dockers officiella dokumentation listar dom ett antal bästa praxis för att bygga egna images; nämn några av dessa.
+
+
+##### 6. I Dockers officiella dokumentation listar dom ett antal bästa praxis för när man  bygger egna images; nämn några av dessa.
 
 
 
-##### 7. Vad menas med *containerization*?
+
+
+##### 7. Hur skulle du beskriva containerteknologi?
+
+
 
 
 
@@ -47,7 +71,11 @@ docker exec -it <container id> /bin/bash
 
 
 
+
+
 ##### 9. Vad är en Dockerfile?
+
+
 
 
 
@@ -55,11 +83,17 @@ docker exec -it <container id> /bin/bash
 
 
 
+
+
 ##### 11. Hur pushar du en image till Docker hub?
 
 
 
-##### 12. Hur tar du bort en stoppad container?
+
+
+##### 12. Hur raderar man  en stoppad container?
+
+
 
 
 
@@ -67,7 +101,11 @@ docker exec -it <container id> /bin/bash
 
 
 
+
+
 ##### 14. Vad är en Docker image?
+
+
 
 
 
@@ -75,11 +113,145 @@ docker exec -it <container id> /bin/bash
 
 
 
+
+
 ##### 16. Nämn några exempel på Dockerfile instruktioner som inte skapar ett nytt lager
 
 
 
+
+
+###### 17. Beskriv Image Build process
+
+
+
+
+
+###### 18. Varför bör man så långt det är möjligt försöka undvika att skapa ny *layers* i sina images(genom Dockerfile)?
+
+
+
+
+
+###### 19. Namespacing är en teknik som möjliggör att processer kan köras isolerade. I vilket operativsystem använder kernel denna teknik?
+
+
+
+
+
+###### 20. Vilket operativsystem kör Docker Server?
+
+
+
+
+
+###### 21. Vad är Volumes?
+
+
+
+
+
+###### 22. Kan man köra flera processer inuti en Docker Container?
+
+
+
+
+
+###### 23. Vad är  .dockerignore?
+
+### 2. Docker CLI
+
+
+
+##### 1.  Vad gör detta kommando?
+
+```bash
+docker exec -it <container id> /bin/bash
+```
+
+
+
+
+
+###### 2. Hur listar man containers som körs?
+
+
+
+
+
+###### 3. Hur får man ut loggar från en container?
+
+
+
+
+
+###### 4. Hur listar man samtliga containers som har körts?
+
+
+
+
+
+###### 5. Vad gör följande kommando?
+
+```
+docker run -p 8000:80 nginx
+```
+
+
+
+
+
+###### 6. Hur skapar du ett nytt network?
+
+
+
+###### 
+
+###### 7. Hur namnger man en container?
+
+
+
+
+
+###### 8. Hur pushar man en image till ett registry?
+
+
+
+
+
+###### 9. Hur mountar man volumes från lokal maskin in i en container?
+
+
+
+
+
+##### 10. Vilka restart-policies kan man använda sig av för en container?
+
+
+
+
+
+###### 11. Vad gör följande kommando?
+
+```
+docker-compose up --build
+```
+
+
+
+
+
+###### 12. 
+
+```
+docker-compose down
+```
+
+
+
 ### 2. Dockerfile
+
+
 
 Övningar **1.1** och **1.2** är båda python-applikationer. Som base image använder ni er av pythons officiella Docker Image.
 
@@ -420,3 +592,26 @@ https://docs.docker.com/compose/gettingstarted/
 ```
 Följ stegen i guiden
 ```
+
+### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
